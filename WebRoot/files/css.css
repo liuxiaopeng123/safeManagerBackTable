@@ -1,0 +1,63 @@
+BODY {
+	TEXT-ALIGN: center; LINE-HEIGHT: 24px; BACKGROUND-COLOR: #eeeeee; MARGIN: 0px; FONT-SIZE: 12px
+}
+.bk {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0d63bd; TEXT-DECORATION: none
+}
+.meun {
+	COLOR: #ffffff;FONT-SIZE: 12px
+}
+.meun A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.meun A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.meun A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.meun A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.bb {
+	BORDER-BOTTOM: #cecfe4 1px solid; BORDER-LEFT: #cecfe4 1px solid; BORDER-RIGHT: #cecfe4 1px solid
+}
+.ct {
+	COLOR: #0552a3; FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+.lin {
+	MARGIN-LEFT: 15px; FONT-SIZE: 12px
+}
+.ls {
+	COLOR: #008d07; FONT-WEIGHT: bold
+}
+.dd {
+	BORDER-BOTTOM: #cccccc 1px dotted; FONT-SIZE: 12px
+}
+.left {
+	COLOR: #0552a3
+}
+.left A {
+	COLOR: #0552a3; TEXT-DECORATION: none
+}
+.left A:link {
+	COLOR: #0552a3; TEXT-DECORATION: none
+}
+.left A:visited {
+	COLOR: #0552a3; TEXT-DECORATION: none
+}
+.left A:hover {
+	COLOR: #0552a3; TEXT-DECORATION: underline
+}
+.cc {
+	BACKGROUND-IMAGE: url(../images/22.jpg); BACKGROUND-COLOR: #ffffff; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 50% top
+}
+.a_none A {
+	DISPLAY: none
+}
