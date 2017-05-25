@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="qgzxmis"
+  name="safeManagerBackTable"
   id="myeclipse.1329029819070"
   context-root="/qgzxmis"
   j2ee-spec="5.0"
-  archive="qgzxmis.war">
+  archive="safeManagerBackTable.war">
   <attributes>
     <attribute name="webrootdir" value="/WebRoot" />
   </attributes>

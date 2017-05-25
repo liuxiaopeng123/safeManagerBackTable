@@ -78,7 +78,7 @@ a.style.display="";
               <td width="33" height="28"><img src="images/main_46.gif" width="28" height="28"></td>
               <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td onClick="go('datamanager.jsp')" height="23" class="STYLE4" style="cursor:hand" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'">数据管理</td>
+                    <td onClick="go('datamanager.jsp')" height="23" class="STYLE4" style="cursor:hand" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'">运动管理</td>
                   </tr>
               </table></td>
             </tr>
@@ -123,7 +123,7 @@ a.style.display="";
               <td width="33" height="28"><img src="images/main_46.gif" width="28" height="28"></td>
               <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td onClick="go('n-contact.jsp')" height="23" class="STYLE4" style="cursor:hand" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'">医师咨询</td>
+                    <td onClick="go('doctorconsult.jsp')" height="23" class="STYLE4" style="cursor:hand" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'">医师咨询</td>
                   </tr>
               </table></td>
             </tr>

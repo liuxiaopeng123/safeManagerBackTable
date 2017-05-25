@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import bean.DoctorDataBean;
 import bean.FoodDataBean;
 import bean.HealthDataBean;
 import bean.SportDataBean;
@@ -52,6 +53,8 @@ public class SafeManagerDao {
 			}else {
 				stmt.executeUpdate("insert into user_info_safemanager (user_name,user_password,user_sex,user_height,user_weight,user_status)" +
 						" values ('"+userName+"','"+userPwd+"','"+userSex+"','"+userHeight+"','"+userWeight+"','"+userStatus+"')"); 
+				stmt.executeUpdate("insert into healthmanager (username,userhealthnumber,userssy,userszy,userxl,date)" +
+						" values ('"+userName+"','"+"88"+"','"+"70"+"','"+"120"+"','"+"65"+"','"+"0"+"')"); 
 				rs.close();  
 				stmt.close();
 				return true;
@@ -332,5 +335,86 @@ public class SafeManagerDao {
 			return false;
 		}
 		
+	}
+
+	//查询医师数据
+	public List<DoctorDataBean> queryDoctorData(String name) {
+		List<DoctorDataBean> beans=new ArrayList<DoctorDataBean>();
+		try {
+			Statement stmt=conn.createStatement();  
+			//或者查询记录  
+			ResultSet rs;
+			if (name=="") {
+				rs = stmt.executeQuery("select * from doctorconsult ");  
+			}else {
+				rs = stmt.executeQuery("select * from doctorconsult where name='"+name+"'");  
+			}
+			//获得数据
+			ResultSetMetaData resultSetMetaDate=rs.getMetaData();
+			//获得列数
+			int colimnCount=resultSetMetaDate.getColumnCount();
+			//第五步，对查询的结果进行处理  
+			while(rs.next()){ 
+				DoctorDataBean bean = new DoctorDataBean();
+				for (int i = 1; i <= colimnCount; i++) {
+					if ("name".equals(resultSetMetaDate.getColumnName(i))) {
+						bean.setName(rs.getString(i));
+						System.out.println(rs.getString(i));
+					}
+					if ("age".equals(resultSetMetaDate.getColumnName(i))) {
+						bean.setAge(rs.getString(i));
+						System.out.println(rs.getString(i));
+					}
+					if ("sex".equals(resultSetMetaDate.getColumnName(i))) {
+						bean.setSex(rs.getString(i));
+						System.out.println(rs.getString(i));
+					}
+					if ("work".equals(resultSetMetaDate.getColumnName(i))) {
+						bean.setWork(rs.getString(i));
+						System.out.println(rs.getString(i));
+					}
+					if ("phone".equals(resultSetMetaDate.getColumnName(i))) {
+						bean.setPhone(rs.getString(i));
+						System.out.println(rs.getString(i));
+					}
+					if ("status".equals(resultSetMetaDate.getColumnName(i))) {
+						bean.setStatus(rs.getString(i));
+						System.out.println(rs.getString(i));
+					}
+				}
+				beans.add(bean);
+			//对记录的操作  
+			}  
+			//第六步，关闭连接  
+			rs.close();  
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		return beans;
+	}
+
+	//更新用户信息
+	public boolean updateUserInfo(String name, String sex, String height,
+			String weight,String status) {
+		
+		try {
+			Statement stmt=conn.createStatement();
+			
+			ResultSet rs = stmt.executeQuery("select * from user_info_safemanager where user_name='"+name+"'"); 
+			while (rs.next()) {
+				stmt.executeUpdate("update user_info_safemanager set user_sex='"+sex+"',user_height='"+height+"',user_weight='"+weight+"',user_status='"+status+"' where user_name='"+name+"'"); 
+				
+				rs.close();  
+				stmt.close();
+				return true;
+			}
+			return false;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
 	}
 }

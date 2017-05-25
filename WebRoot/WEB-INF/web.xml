@@ -106,4 +106,22 @@
     <servlet-name>UpdateHealthData</servlet-name>
     <url-pattern>/safe/updateHealthData</url-pattern>
   </servlet-mapping>
+  <!-- 查询医师数据-->
+  <servlet>
+    <servlet-name>QueryDoctorData</servlet-name>
+    <servlet-class>app.QueryDoctorData</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>QueryDoctorData</servlet-name>
+    <url-pattern>/safe/queryDoctorData</url-pattern>
+  </servlet-mapping>
+  <!-- 查询医师数据-->
+  <servlet>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <servlet-class>app.UpdateUserInfo</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <url-pattern>/safe/updateUserInfo</url-pattern>
+  </servlet-mapping>
 </web-app>

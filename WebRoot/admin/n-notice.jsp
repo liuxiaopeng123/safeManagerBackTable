@@ -44,7 +44,7 @@ body {
 <%
 String url="/qgzxmis/admin/n-notice.jsp?1=1";
 String key = request.getParameter("key")==null?"":request.getParameter("key");
-String sql = "select * from user_info_safemanager where user_status='0'";
+String sql = "select * from user_info_safemanager ";
 if(!key.equals(""))
 {
 url+="&key="+key;

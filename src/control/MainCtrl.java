@@ -738,7 +738,38 @@ public class MainCtrl extends HttpServlet {
 			}
 		}
 		
+		//管理员添加医师数据
+		if(ac.equals("adddoctorconsult")){
+			String name = request.getParameter("name");
+			String sex = request.getParameter("sex");
+			String age = request.getParameter("age");
+			String work = request.getParameter("work");
+			String phone = request.getParameter("phone");
+			
+			ArrayList cklist = (ArrayList)dao.select("select * from doctorconsult where name='"+name+"'");
+			if(cklist.size()!=0){
+				request.setAttribute("no", "");
+		    	go("/admin/adddoctorconsult.jsp", request, response);
+			}else{
+				dao.commOper("insert into doctorconsult (name,sex,age,work,phone,status)" +
+						" values ('"+name+"','"+sex+"','"+age+"','"+work+"','"+phone+"','0')");
+				request.setAttribute("suc", "");
+		    	go("/admin/adddoctorconsult.jsp", request, response);
+			}
+		}
 		
+		//编辑医师数据
+		if(ac.equals("editdoctorconsult")){
+			String id  = request.getParameter("id");
+			String name  = request.getParameter("name");
+			String age  = request.getParameter("age");
+			String sex  = request.getParameter("sex");
+			String work  = request.getParameter("work");
+			String phone  = request.getParameter("phone");
+			dao.commOper("update doctorconsult set name='"+name+"',age='"+age+"',sex='"+sex+"',work='"+work+"',phone='"+phone+"',status='"+"0"+"' where id="+id);
+			request.setAttribute("suc", "");
+	    	go("/admin/editdoctorconsult.jsp", request, response);
+		}
 		
 		//编辑运动数据
 		if(ac.equals("editdatamanager_safe")){
