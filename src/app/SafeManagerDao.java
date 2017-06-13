@@ -211,7 +211,7 @@ public class SafeManagerDao {
 		try {
 			Statement stmt=conn.createStatement();  
 			//或者查询记录  
-			ResultSet rs = stmt.executeQuery("select * from foodmanager where foodType='"+foodType+"'");  
+			ResultSet rs = stmt.executeQuery("select * from foodmanager ");  
 			//获得数据
 			ResultSetMetaData resultSetMetaDate=rs.getMetaData();
 			//获得列数

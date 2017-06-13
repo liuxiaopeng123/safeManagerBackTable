@@ -23,11 +23,8 @@ public class QueryUserInfo extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
 		resp.setContentType("text/html");
-        //定义字符输出流，将结果输出
         PrintWriter out = resp.getWriter();
-        
 		String user_name = req.getParameter("user_name");
 		String user_pwd = req.getParameter("user_pwd");
 		System.out.println(user_name+user_pwd);
